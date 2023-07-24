@@ -1,0 +1,7 @@
+.phonebook__search {
+    display: flex;
+    flex-direction: column;
+
+    width: 240px;
+    padding: 12px;
+}

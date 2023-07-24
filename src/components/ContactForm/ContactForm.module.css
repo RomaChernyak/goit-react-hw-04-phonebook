@@ -1,0 +1,70 @@
+.phonebook__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    /* border: 2px solid;
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+    border-image-slice: 1; */
+
+    border: 2px solid;
+    animation: rotateColors 6s linear infinite;
+    
+    padding: 12px;
+    width: 240px;
+}
+
+.phonebook__label {
+    display: flex;
+    flex-direction: column;
+
+    width: 180px;
+}
+
+@keyframes rotateColors {
+    0% {
+        border-color: red;
+    }
+
+    20% {
+        border-color: yellow;
+    }
+
+    40% {
+        border-color: lime;
+    }
+
+    60% {
+        border-color: aqua;
+    }
+
+    80% {
+        border-color: blue;
+    }
+
+    100% {
+        border-color: magenta;
+    }
+}
+
+.phonebook__add {
+    background-color: white;
+    border-radius: 8px;
+
+    cursor: pointer;
+    width: 120px;
+}
+
+.phonebook__add:hover {
+    color: blue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.phonebook__add:focus,
+.phonebook__add:active {
+    outline: none;
+
+    background-color: blue;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
