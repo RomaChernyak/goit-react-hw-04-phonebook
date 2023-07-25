@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import css from "./ContactList.module.css";
 
-export const ContactList = ({ contacts, handleDeleteContact }) => {
-    
+export const ContactList = ({ contacts, deleteContact }) => {
     return (
         <ul className={css.phonebook__list}>
             {contacts.length !== 0
@@ -13,7 +12,7 @@ export const ContactList = ({ contacts, handleDeleteContact }) => {
                         <span>{number}</span>
                         <button
                             type="button"
-                            onClick={() => handleDeleteContact(id)}
+                            onClick={() => deleteContact(id)}
                             className={css.contact__item}
                         >
                             Delete
@@ -33,5 +32,5 @@ ContactList.propTypes = {
     contacts: PropTypes.arrayOf(PropTypes.objectOf(
         PropTypes.string.isRequired
     )).isRequired,
-    handleDeleteContact: PropTypes.func.isRequired,
+    deleteContact: PropTypes.func.isRequired,
 };
